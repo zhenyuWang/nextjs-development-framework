@@ -26,6 +26,8 @@ export default function FormInput({
   type?: string
   endContent?: any
 }) {
+  // Notice: Do not use both the Input isRequired and the react-hook-form validation to check the required fields at the same time.
+  // Input isRequired will cause the react - hook - form required fields to be invalid
   return register ? (
     <Input
       label={label}
