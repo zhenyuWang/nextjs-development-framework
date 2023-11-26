@@ -1,4 +1,6 @@
+'use client'
 import './globals.css'
+import { NextUIProvider } from '@nextui-org/react'
 
 export default function RootLayout({
   children,
@@ -18,7 +20,9 @@ export default function RootLayout({
           content='A NextJs-based development framework that integrates eslint, code checking, commit-msg validation, and more.'
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <NextUIProvider>{children}</NextUIProvider>
+      </body>
     </html>
   )
 }
