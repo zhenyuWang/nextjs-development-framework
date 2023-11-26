@@ -47,7 +47,8 @@ export default function SignIn() {
         <h1 className='mb-8 text-3xl text-center font-bold'>Sign In</h1>
         <form
           className='flex flex-col items-center'
-          onSubmit={handleSubmit(onSubmit)}>
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <div className='w-full flex flex-col'>
             <FormInput
               label='Username'
@@ -69,7 +70,8 @@ export default function SignIn() {
                 <button
                   className='focus:outline-none'
                   type='button'
-                  onClick={toggleVisibility}>
+                  onClick={toggleVisibility}
+                >
                   {isVisible ? (
                     <AiFillEye className='text-2xl text-default-400 pointer-events-none' />
                   ) : (

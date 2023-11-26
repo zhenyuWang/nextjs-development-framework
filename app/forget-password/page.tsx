@@ -57,7 +57,8 @@ export default function ForgetPassword() {
         <h1 className='mb-8 text-3xl text-center font-bold'>Forget Password</h1>
         <form
           className='flex flex-col items-center'
-          onSubmit={handleSubmit(onSubmit)}>
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <div className='w-full flex flex-col'>
             <FormInput
               label='Email'
@@ -80,7 +81,8 @@ export default function ForgetPassword() {
                   className='focus:outline-none w-[110px] text-blue-500'
                   type='button'
                   disabled={sendCodeButtonText !== 'Send code'}
-                  onClick={sendCode}>
+                  onClick={sendCode}
+                >
                   {sendCodeButtonText}
                 </button>
               }
