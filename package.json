@@ -23,6 +23,9 @@
       "eslint --fix"
     ]
   },
+  "engines": {
+    "node": ">=18.12.0"
+  },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
     "framer-motion": "^10.16.5",
