@@ -69,7 +69,7 @@ export default function SignIn() {
               endContent={
                 <button
                   className='focus:outline-none'
-                  type='button'
+                  data-testid='toggle-password-input-type-sign-in'
                   onClick={toggleVisibility}
                 >
                   {isVisible ? (

@@ -5,11 +5,10 @@ import '@testing-library/jest-dom'
 describe('Home', () => {
   it('render', () => {
     render(<Home />)
-    const img = screen.getByRole('img', { name: 'avatar' })
-    expect(img).toBeInTheDocument()
-    const heading = screen.getByRole('heading', {
-      name: 'Nextjs development framework',
-    })
-    expect(heading).toBeInTheDocument()
+
+    expect(screen.getByRole('img', { name: 'avatar' })).toBeInTheDocument()
+    expect(screen.getByRole('heading')).toHaveTextContent(
+      'Nextjs development framework',
+    )
   })
 })

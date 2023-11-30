@@ -70,6 +70,7 @@ export default function SignUp() {
                 <button
                   className='focus:outline-none'
                   type='button'
+                  data-testid='toggle-password-input-type-sign-up'
                   onClick={toggleVisibility}
                 >
                   {isVisible ? (
