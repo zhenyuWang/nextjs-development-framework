@@ -11,7 +11,8 @@
     "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks",
     "test:unit": "jest",
-    "test:unit:w": "jest --watch"
+    "test:unit:w": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "simple-git-hooks": {
     "pre-commit": "npm exec lint-staged && npm run test:unit",
