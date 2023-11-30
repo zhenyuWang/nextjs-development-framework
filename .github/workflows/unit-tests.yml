@@ -1,11 +1,25 @@
 name: run unit tests
-on: push
+on:
+  push:
+    branches: [main]
 jobs:
-  build:
+  unit-tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Install modules
-        run: pnpm i
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        run: corepack enable
+
+      - name: Set node version to 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Run unit tests
-        run: pnpm test:unit
+        run: pnpm run test:unit
