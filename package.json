@@ -12,7 +12,9 @@
     "postinstall": "simple-git-hooks",
     "test:unit": "jest",
     "test:unit:w": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "test:e2e": "cypress run",
+    "test:e2e:w": "cypress open"
   },
   "simple-git-hooks": {
     "pre-commit": "npm exec lint-staged && npm run test:unit",
@@ -45,6 +47,8 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "cypress": "^13.6.0",
+    "cypress-image-snapshot": "^4.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "eslint-plugin-prettier": "^5.0.1",
