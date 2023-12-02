@@ -3,6 +3,12 @@ import SignUp from '../app/sign-up/page'
 import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
 
+jest.mock('next/navigation', () => ({
+  useRouter() {
+    return {}
+  },
+}))
+
 describe('SignUp', () => {
   beforeEach(() => {
     render(<SignUp />)

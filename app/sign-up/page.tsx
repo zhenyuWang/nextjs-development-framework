@@ -1,15 +1,15 @@
 'use client'
+import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import {
-  Input,
   Button,
   Popover,
   PopoverContent,
   PopoverTrigger,
   Link,
 } from '@nextui-org/react'
-import { useState } from 'react'
-import FormInput from '../../components/FormInput'
+import FormInput from '../../components/Form/FormInput'
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 
 type Inputs = {
@@ -18,6 +18,7 @@ type Inputs = {
 }
 
 export default function SignUp() {
+  const router = useRouter()
   const [showPopover, setShowPopover] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -38,6 +39,7 @@ export default function SignUp() {
     setShowPopover(true)
     setTimeout(() => {
       setShowPopover(false)
+      router.replace('/sign-in')
     }, 2000)
   }
 

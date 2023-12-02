@@ -1,5 +1,5 @@
 import { Input } from '@nextui-org/react'
-import { validationRules } from '../utils/form'
+import { validationRules } from '../../utils/form'
 
 export default function FormInput({
   label = '',
