@@ -12,7 +12,9 @@ export default function Home() {
         width={100}
         height={100}
       />
-      <h1 className='mt-6 text-lg text-white'>Nextjs development framework</h1>
+      <h1 className='mt-6 text-lg text-black dark:text-white'>
+        Nextjs development framework
+      </h1>
     </main>
   )
 }

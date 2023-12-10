@@ -47,7 +47,9 @@ export default function SignIn() {
   return (
     <main className='w-100 h-screen flex flex-col items-center justify-center'>
       <div className='min-w-[300px] max-w-[360px] w-1/3 mt-[-100px]'>
-        <h1 className='mb-8 text-3xl text-center font-bold'>Sign In</h1>
+        <h1 className='mb-8 text-3xl text-center font-bold text-black dark:text-white'>
+          Sign In
+        </h1>
         <form
           className='flex flex-col items-center'
           onSubmit={handleSubmit(onSubmit)}
@@ -59,8 +61,8 @@ export default function SignIn() {
               description='Spaces not allowed'
               register={register}
               name='username'
+              error={errors.username}
             />
-            <span>{errors.username?.message}</span>
           </div>
           <div className='w-full mt-4 flex flex-col'>
             <FormInput
@@ -83,8 +85,8 @@ export default function SignIn() {
                 </button>
               }
               type={isVisible ? 'text' : 'password'}
+              error={errors.password}
             />
-            <span>{errors.password?.message}</span>
           </div>
           <Popover placement='bottom' isOpen={showPopover} color='success'>
             <PopoverTrigger>

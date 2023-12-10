@@ -35,13 +35,13 @@ const NavBar = () => {
   }
 
   return (
-    <Navbar className='bg-sky-500'>
+    <Navbar className='bg-sky-400 dark:bg-sky-500'>
       <NavbarBrand>
-        <Link href='/' className='h-16 text-white'>
+        <Link href='/' className='h-16 text-black dark:text-white'>
           Maybe Your Logo
         </Link>
       </NavbarBrand>
-      <NavbarContent justify='end'>
+      <NavbarContent justify='end' className='pr-8'>
         {userInfo.username ? (
           <NavbarItem>
             <Dropdown placement='bottom' className='min-w-[130px] w-[130px'>
@@ -82,14 +82,14 @@ const NavBar = () => {
         ) : (
           <>
             <NavbarItem>
-              <Link href='/sign-in' className='text-white'>
+              <Link href='/sign-in' className='text-black dark:text-white'>
                 Sign In
               </Link>
             </NavbarItem>
             <NavbarItem>
               <Button
                 as={Link}
-                className='text-white'
+                className='text-black dark:text-white'
                 color='primary'
                 href='/sign-up'
                 variant='bordered'

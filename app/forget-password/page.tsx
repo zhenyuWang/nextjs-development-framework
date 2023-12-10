@@ -56,7 +56,9 @@ export default function ForgetPassword() {
   return (
     <main className='w-100 h-screen flex flex-col items-center justify-center'>
       <div className='min-w-[300px] max-w-[360px] w-1/3 mt-[-100px]'>
-        <h1 className='mb-8 text-3xl text-center font-bold'>Forget Password</h1>
+        <h1 className='mb-8 text-3xl text-center font-bold text-black dark:text-white'>
+          Forget Password
+        </h1>
         <form
           className='flex flex-col items-center'
           onSubmit={handleSubmit(onSubmit)}
@@ -68,12 +70,12 @@ export default function ForgetPassword() {
               description='The email you used to register your account'
               register={register}
               name='email'
+              error={errors.email}
             />
-            <span>{errors.email?.message}</span>
           </div>
           <div className='w-full mt-4 flex flex-col'>
             <FormInput
-              label='Verification Code:'
+              label='Verification Code'
               placeholder='verification code'
               description='Six-digit number'
               register={register}
@@ -88,8 +90,8 @@ export default function ForgetPassword() {
                   {sendCodeButtonText}
                 </button>
               }
+              error={errors.verificationCode}
             />
-            <span>{errors.verificationCode?.message}</span>
           </div>
           <Popover placement='bottom' isOpen={showPopover} color='success'>
             <PopoverTrigger>
