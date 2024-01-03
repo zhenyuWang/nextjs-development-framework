@@ -61,7 +61,7 @@ const NavBar = () => {
                   <DropdownItem
                     key='username'
                     color='default'
-                    className='text-black'
+                    className='text-black dark:text-white'
                     isDisabled
                   >
                     {userInfo.username}
@@ -69,8 +69,8 @@ const NavBar = () => {
                 </DropdownSection>
                 <DropdownItem
                   key='logout'
-                  className='text-warning'
-                  color='warning'
+                  className='text-sky-500'
+                  color='primary'
                   startContent={<AiOutlineLogout className='text-xl' />}
                   onClick={logout}
                 >
