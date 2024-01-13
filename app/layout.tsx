@@ -2,6 +2,7 @@
 import './globals.css'
 import { NextUIProvider } from '@nextui-org/react'
 import ThemeContextProvider from '@/context/theme-context'
+import GitHubLink from '@/components/GitHubLink'
 import ThemeSwitch from '@/components/ThemeSwitch'
 
 export default function RootLayout({
@@ -24,6 +25,7 @@ export default function RootLayout({
       </head>
       <body className='bg-gradient-to-r from-[#ecddfa] to-[#7ccdf5] dark:from-[#330066] dark:to-[#000]'>
         <ThemeContextProvider>
+          <GitHubLink />
           <ThemeSwitch />
           <NextUIProvider>{children}</NextUIProvider>
         </ThemeContextProvider>

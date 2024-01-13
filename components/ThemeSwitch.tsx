@@ -10,7 +10,7 @@ export default function ThemeSwitch() {
 
   return (
     <button
-      className='fixed top-4 right-4 z-50  text-black shadow-2xl rounded-full hover:scale-[1.15] active:scale-105 transition-all dark:text-white'
+      className='fixed top-4 right-4 z-50 shadow-2xl rounded-full hover:scale-[1.15] active:scale-105 transition-all'
       onClick={toggleTheme}
     >
       {theme === 'light' ? (
